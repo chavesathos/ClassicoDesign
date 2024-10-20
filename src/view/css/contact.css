@@ -1,0 +1,149 @@
+.heading .wrapper .text-contact {
+    font: 400 1.5rem "Mukta", sans-serif;
+    left: 250px;
+    
+  }
+
+.img-contact {
+    width: 25.5rem;   
+}
+
+.title-contact, 
+.paragrafo,
+.paragrafo-contact,
+.i-contact,
+.img-contact 
+ {
+    text-align: center;
+    align-items: center;
+ }
+
+ .paragrafo-contact {
+    margin-bottom: 10px;
+ }
+
+ .icon-contact {
+    margin-top: 20px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-contact {
+    font-size: x-large;
+    margin-top: 0px;
+    color:var(--creative);
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.title-form {
+    font-size: x-large;
+    margin: 10% 5%;
+    color:var(--text);
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.i-contact i{
+    color: var(--creative);
+    font-size: 40px;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+.i-contact i:hover{
+    color: var(--decoration);
+    transform: rotate(360deg);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 15px;
+    color:var(--creative);
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+}
+
+.input-field {
+    padding: 0;
+    position: relative;
+}
+
+input,
+textarea {
+    color: white;
+    font-size: 15px;
+    background: #222;
+    width: 80%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    margin-bottom: 40px;
+}
+
+.underline::before,
+.underline::after {
+   position: absolute;
+   content: '';
+   height: 1px;
+   width: 100%;
+   top: 40px;
+   bottom: -5px;
+   left: 0;
+   background: var(--creative);
+   margin-bottom: 40px;
+}
+.underline::before {
+    background: var(--creative);
+}
+.underline::after {
+    background: var(--decoration);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+.input-field input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+
+
+@media(min-width:930px) {
+    .img-contact {
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+    main .container { 
+        width: 100%;
+        height: auto;
+    
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media(min-width:1240px) {
+    .line {
+        width: 1px;
+        height: 700px;
+        border-left: 1px solid var(--decoration);
+        margin: 0 10%;
+    }
+  }
+
+  @media(max-width:1240px) {
+    .description div .btn-form {
+        margin-left: 15%;
+    }
+  }

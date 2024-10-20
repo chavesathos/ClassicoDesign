@@ -1,0 +1,17 @@
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social i{
+    color: var(--creative);
+    font-size: 25px;
+    margin: 10px;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+.social i:hover{
+    color: var(--decoration);
+    transform: rotate(360deg);
+}

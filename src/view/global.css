@@ -1,0 +1,47 @@
+@import url("./css/header.css");
+@import url("./css/main.css");
+@import url("./css/footer.css");
+@import url("./css/collection.css");
+@import url("./css/contact.css");
+@import url("./css/history.css");
+
+
+* {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+}
+:root {
+    --text: #EAD9C7;
+    --decoration: #6D4925;
+    --creative: #af8a65;
+  }
+
+  body {
+    color: var(--text);
+    font: 400 1rem "Mukta", sans-serif;
+    background: #222;
+    
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .button:hover {
+    cursor: pointer;
+  }
+
+  #app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    width: 100%;
+    height: auto;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+

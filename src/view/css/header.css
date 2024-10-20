@@ -1,0 +1,155 @@
+header{
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*Logo lado esquerdo do header*/
+
+.logo-text{
+    font-family: "MuseoModerno", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color:var(--text);
+}
+
+/*Menu Hamburguer (toggle) para mobile*/
+nav .togglebtn{
+    width: 35px;
+    height: auto;
+    position: absolute;
+    top:34px;
+    right: 5%;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+}
+nav .togglebtn span{
+    display: block;
+    background-color: var(--decoration);
+    margin: 5px 0px;
+    width:100%;
+    height:3px;
+    transition: 0.3s;
+    transition-property:  transform, opacity;
+
+}
+
+/*Navbar lado direito do header*/
+nav .navlinks{
+    list-style-type: none;
+ /*
+    Tentar resolver bug de conteúdos estourados na pagina atravez destas propiedades usando-as no .js   
+    visibility: hidden; escolhe o tipo de visualizacao dos conteudos.
+    overflow: hidden; esconde conteudos estourados na pagina ?
+*/    
+}
+nav .navlinks li{
+    display: inline-block;
+}
+nav .navlinks li a{
+     color:var(--creative);
+     margin-right: 2.5rem;
+}
+
+nav .navlinks li .gravadora{
+    color:#17d6eb;
+}
+nav .navlinks li .gravadora:hover{
+    color:#0e8592;
+}
+
+nav .navigation-link {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    position: relative;
+}
+
+nav .navigation-link:hover {
+    color: var(--decoration);
+}
+
+nav .navigation-link::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+
+    width: 60%;
+    height: 1px;
+    background: var(--decoration);
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s;
+
+}
+
+nav .navigation-link:hover::after {
+   transform: scaleX(1);
+   transform-origin: left;
+   transition: transform 0.4s;
+}
+
+/*Responsivo design & display navbar(small screen) */
+@media(max-width:930px) {
+    nav .togglebtn {
+        display: inline;
+    }
+    /* for toggle button */
+    .click {
+        top: 40px
+    }
+    .click span {
+        position: absolute;
+        margin-top: 12px;
+    }
+    .click span:first-child {
+        transform: rotate(-40deg);
+    }
+    .click span:nth-child(2) {
+        opacity: 0;
+        margin: 0;
+    }
+    .click span:last-child {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    nav .navlinks {
+        position: absolute;
+        top: 100px;
+        right: -100%;
+        bottom: 50%;
+        width: 40%;
+        height: auto;
+        background-color: #222;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
+        transition: 0.5s;
+        padding: 25px 0px;
+        
+    }
+    nav .navlinks li {
+        display: block;
+        
+    }
+    nav .navlinks li a {
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    
+    }
+    nav .navlinks.open {
+        right: 0;
+    }
+}

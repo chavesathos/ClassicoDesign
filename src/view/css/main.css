@@ -1,0 +1,121 @@
+main .container { 
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+/*estilo da animação da imagem principal*/
+
+.animate-before {
+    transform: translateY(40px);
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .animate-after {
+    transform: translateY(-40px);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .heading .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin: 20px;
+  }
+  
+  .heading .wrapper .offset {
+    transform: translateX(-50%);
+  }
+  
+  .heading .wrapper .text {
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"MORF" 15,"SHLN" 50;
+    font-size: 50px;
+
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    transition-duration: 1s;
+  }
+  
+  main img {
+    width: 500px;
+    height: auto;
+    bottom: 10px;
+    padding: 0 30px;
+  }
+
+/*estilos dos conteudos da pagina*/
+.description {
+    width: 100%;
+    max-width: 570px;
+}
+
+.description h1, .description h2 {
+  font-family: "Ballet", cursive;
+  font-size: 100px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.description p {
+    width: 100%;
+    font-size: 18px;
+}
+
+.paragrafo {
+  margin-bottom: 40px;
+}
+
+.description div {
+    display: flex;
+    column-gap: 32px;
+}
+
+.description div .button {
+    width: 50%;
+    padding: 10px 0;
+    margin-left: 25%;
+    margin-bottom: 40px;
+    border-radius: 3px;
+    color: var(--creative);
+
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    background: transparent;
+    border: 1px solid var(--decoration);
+    transition: 0.5s;
+
+    transform: skew(-10deg);
+}
+.description div .button:hover {
+  transform: scale(1.1);
+}
+
+
+@media(max-width:1240px) {
+  .container {
+      display: inline-flex;
+      flex-direction: column;
+      text-align: center;
+  } 
+}
+
+@media(max-width:630px) {
+  main img {
+    width: 100%;
+  }
+}

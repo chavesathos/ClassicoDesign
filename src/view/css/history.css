@@ -1,0 +1,48 @@
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-container {
+    margin-bottom: 100px;
+}
+
+.title {
+    font-family: "Ballet", cursive;
+    font-size: 100px;
+    font-weight: 400;
+    font-style: normal;
+    padding: 20px 40px 0px;
+}
+
+h2 {
+    padding: 0px 20px;
+}
+
+p {
+    margin-top: 20px;
+}
+
+.description span::before {
+   content: "________";
+   color: #222;
+}
+
+@media(max-width:1240px) {
+    .title {
+        font-size: 80px;
+    } 
+  }
+
+  @media(max-width:910px) {
+     .title {
+        font-size: 38px;
+     }
+     .description .fundations {
+        font-size: 50px;
+      }
+   }
+  
+  
+ 
