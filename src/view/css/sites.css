@@ -24,6 +24,10 @@ p {
     margin-top: 20px;
 }
 
+.description img {
+    margin-top: 40px;
+}
+
 .description span::before {
    content: "________";
    color: #222;
